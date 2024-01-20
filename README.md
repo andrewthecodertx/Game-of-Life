@@ -44,11 +44,6 @@ of the grid based on the rules.
 Feel free to experiment with different initial configurations and
 observe the patterns that emerge over time.
 
-## Example
-
-You can find a working example of Conway's Game of Life in the
-provided JavaScript code and HTML file.
-
 ## References
 
 - [Wikipedia - Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
