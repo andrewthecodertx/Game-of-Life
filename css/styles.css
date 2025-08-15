@@ -1,9 +1,11 @@
-* {
-  box-sizing: border-box;
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
 }
 
-#gameCanvas {
-  align-items: center;
-
-
+canvas {
+  background-color: #222;
+  border: 1px solid #444;
 }

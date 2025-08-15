@@ -1,10 +1,10 @@
 const cvs = document.querySelector("canvas");
 const ctx = cvs.getContext("2d");
 
-cvs.width = 900;
-cvs.height = 800;
+cvs.width = 800;
+cvs.height = 600;
 
-const res = 2; /* pixle size */
+const res = 4; /* pixle size */
 
 const columns = cvs.width / res;
 const rows = cvs.height / res;
