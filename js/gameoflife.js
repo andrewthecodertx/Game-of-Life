@@ -4,13 +4,13 @@ const ctx = cvs.getContext("2d");
 cvs.width = 800;
 cvs.height = 600;
 
-const res = 4; /* pixle size */
+const res = 5; /* pixle size */
 
 const columns = cvs.width / res;
 const rows = cvs.height / res;
 
 let gen = 0; /* keep track of Grids */
-let running = true; // Flag to control simulation state
+let running = true; /* flag to control simulation state */
 
 /* the initial grid */
 let grid = new Array(columns)
@@ -75,14 +75,13 @@ function run() {
   requestAnimationFrame(run);
 }
 
-// Event listeners for keyboard controls and mouse clicks
 document.addEventListener("keydown", (event) => {
   switch (event.key) {
     case " ":
-      running = !running; // Toggle simulation state with SPACE
+      running = !running;
       break;
     case "r":
-      grid = new Array(columns) // Reset grid with random setup
+      grid = new Array(columns)
         .fill(null)
         .map(() =>
           new Array(rows).fill(null).map(() => Math.floor(Math.random() * 2))
@@ -90,7 +89,7 @@ document.addEventListener("keydown", (event) => {
       gen = 0;
       break;
     case "c":
-      grid = grid.map((arr) => arr.fill(0)); // Clear the board with 'C'
+      grid = grid.map((arr) => arr.fill(0));
       gen = 0;
       break;
   }
@@ -101,7 +100,7 @@ cvs.addEventListener("click", (event) => {
   const y = Math.floor(event.offsetY / res);
 
   if (x >= 0 && x < columns && y >= 0 && y < rows) {
-    grid[x][y] = grid[x][y] === 0 ? 1 : 0; // Toggle cell state on click
+    grid[x][y] = grid[x][y] === 0 ? 1 : 0;
   }
 });
 
